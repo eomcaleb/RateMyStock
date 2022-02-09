@@ -9,7 +9,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  #app {
+  #bitcoin, #ethereum{
     width: 400px;
     height: 100vh;
     margin: auto;
@@ -36,7 +36,7 @@
   button {
     cursor: pointer;
     display: inline-block;
-    background: #333;
+    background: green;
     color: white;
     font-size: 18px;
     border: 0;

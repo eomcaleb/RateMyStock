@@ -8,12 +8,18 @@
     <title>Crypto Conversion</title>
 </head>
 <body>
-    <div id="app">
+    <div id="bitcoin">
         <h1>BitCoin</h1>
-        <h3>USD: ${{USD}}</h3>
-        <h3>JPY: ${{JPY}}</h3>
-        <h3>CAD: ${{CAD}}</h3>
-        <button v-on:click="getPrice()">Update Pricing</button>
+        <h3>USD: ${{formatPrice(BTCUSD)}}</h3>
+        <h3>JPY: {{formatPrice(BTCJPY)}}</h3>
+        <h3>CAD: ${{formatPrice(BTCCAD)}}</h3>
+        <button v-on:click="getBitcoinPrice()">Update Pricing</button>
+        
+        <h1>Ethereum</h1>
+        <h3>USD: ${{formatPrice(ETHUSD)}}</h3>
+        <h3>JPY: {{formatPrice(ETHJPY)}}</h3>
+        <h3>CAD: ${{formatPrice(ETHCAD)}}</h3>
+        <button v-on:click="getEthereumPrice()">Update Pricing</button>
     </div>
 
     <script src="https://unpkg.com/vue@3.0.5"></script>
