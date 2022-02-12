@@ -9,15 +9,11 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  #bitcoin, #ethereum{
-    width: 400px;
-    height: 100vh;
-    margin: auto;
+  
+  #bitcoin {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center;  
   }
   
   h1,
@@ -50,4 +46,7 @@
   button:hover {
     transform: scale(0.98);
   }
-  
+
+  .crypto {
+    width: 200px;
+  }

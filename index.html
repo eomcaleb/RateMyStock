@@ -9,20 +9,33 @@
 </head>
 <body>
     <div id="bitcoin">
-        <h1>BitCoin</h1>
-        <h3>USD: ${{formatPrice(BTCUSD)}}</h3>
-        <h3>JPY: {{formatPrice(BTCJPY)}}</h3>
-        <h3>CAD: ${{formatPrice(BTCCAD)}}</h3>
-        <button v-on:click="getBitcoinPrice()">Update Pricing</button>
-        
-        <h1>Ethereum</h1>
-        <h3>USD: ${{formatPrice(ETHUSD)}}</h3>
-        <h3>JPY: {{formatPrice(ETHJPY)}}</h3>
-        <h3>CAD: ${{formatPrice(ETHCAD)}}</h3>
-        <button v-on:click="getEthereumPrice()">Update Pricing</button>
+        <div class="crypto">
+            <br>
+            <h1>BitCoin</h1>
+            <h3>USD: ${{formatPrice(BTCUSD)}}<br>
+                EUR: €{{formatPrice(BTCEUR)}}<br>
+                CAD: ${{formatPrice(BTCCAD)}}</h3>
+            <button v-on:click="getBitcoinPrice()">Update Pricing</button>
+        </div>
+        <div class="crypto">
+            <br>
+            <h1>Ethereum</h1>
+            <h3>USD: ${{formatPrice(ETHUSD)}}<br>
+                EUR: €{{formatPrice(ETHEUR)}}<br>
+                CAD: ${{formatPrice(ETHCAD)}}</h3>
+            <button v-on:click="getEthereumPrice()">Update Pricing</button>
+        </div>
     </div>
 
+    <template>
+        <div class="small">
+            <line-chart :chart-data="datacollection"></line-chart>
+            <button @click="fillData()">Randomize</button>
+        </div>
+    </template>
+
     <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
